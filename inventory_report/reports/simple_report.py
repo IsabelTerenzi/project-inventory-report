@@ -11,7 +11,7 @@ class SimpleReport:
         val_proxima = min([product["data_de_validade"] for product in lista])
 
         mais_produtos = mode([product["nome_da_empresa"] for product in lista])
-        
+
         return (
            f"Data de fabricação mais antiga: {fab_antiga}\n"
            f"Data de validade mais próxima: {val_proxima}\n"

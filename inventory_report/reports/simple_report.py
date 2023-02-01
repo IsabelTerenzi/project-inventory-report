@@ -1,4 +1,5 @@
 from statistics import mode
+# https://www.w3schools.com/python/ref_stat_mode.asp
 from typing import Dict, List
 
 
@@ -10,7 +11,6 @@ class SimpleReport:
         val_proxima = min([product["data_de_validade"] for product in lista])
 
         mais_produtos = mode([product["nome_da_empresa"] for product in lista])
-        # https://www.w3schools.com/python/ref_stat_mode.asp
 
         return (
            f"Data de fabricação mais antiga: {fab_antiga}\n"

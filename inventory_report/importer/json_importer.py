@@ -8,5 +8,5 @@ class JsonImporter(Importer):
             if "json" not in path:
                 raise ValueError("Arquivo inválido")
             else:
-                result = json.loads(file)
-            return list(result)
+                result = json.loads(file.read())
+            return result

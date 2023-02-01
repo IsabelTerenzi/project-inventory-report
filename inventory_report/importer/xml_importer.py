@@ -1,4 +1,4 @@
-import xml
+import xmltodict
 from inventory_report.importer.importer import Importer
 
 
@@ -8,5 +8,5 @@ class XmlImporter(Importer):
             if "xml" not in path:
                 raise ValueError("Arquivo inválido")
             else:
-                result = xml.parse(file.read())['dataset']['record']
+                result = xmltodict.parse(file.read())['dataset']['record']
             return result
